@@ -1,0 +1,35 @@
+﻿  STM32G4_TFT_ST7735.c
+  STM32G4_TFT_ST7735.c: In function 'draw_menu':
+STM32G4_TFT_ST7735.c(165,50): warning :  passing argument 3 of 'ST7735_WriteString' from incompatible pointer type [-Wincompatible-pointer-types]
+    165 |   ST7735_WriteString(0 + x_offset, i + y_offset, &screen_main[item++], Font_7x10, ST7735_RED, ST7735_BLACK);
+        |                                                  ^~~~~~~~~~~~~~~~~~~~
+        |                                                  |
+        |                                                  char (*)[17]
+  STM32G4_TFT_ST7735.c(21):
+  st7735.h(150,61): note :  expected 'const char *' but argument is of type 'char (*)[17]'
+    150 | void ST7735_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
+        |                                                 ~~~~~~~~~~~~^~~
+  STM32G4_TFT_ST7735.c: In function 'draw_menu_item_highlight':
+STM32G4_TFT_ST7735.c(175,55): warning :  passing argument 3 of 'ST7735_WriteString' from incompatible pointer type [-Wincompatible-pointer-types]
+    175 |  ST7735_WriteString(0 + x_offset, current + y_offset, &screen_main_highlight[current / 20], Font_7x10, ST7735_WHITE, ST7735_BLACK);
+        |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        |                                                       |
+        |                                                       char (*)[17]
+  STM32G4_TFT_ST7735.c(21):
+  st7735.h(150,61): note :  expected 'const char *' but argument is of type 'char (*)[17]'
+    150 | void ST7735_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
+        |                                                 ~~~~~~~~~~~~^~~
+  STM32G4_TFT_ST7735.c: In function 'draw_menu_item':
+STM32G4_TFT_ST7735.c(181,55): warning :  passing argument 3 of 'ST7735_WriteString' from incompatible pointer type [-Wincompatible-pointer-types]
+    181 |  ST7735_WriteString(0 + x_offset, current + y_offset, &screen_main[current / 20], Font_7x10, ST7735_RED, ST7735_BLACK);
+        |                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+        |                                                       |
+        |                                                       char (*)[17]
+  STM32G4_TFT_ST7735.c(21):
+  st7735.h(150,61): note :  expected 'const char *' but argument is of type 'char (*)[17]'
+    150 | void ST7735_WriteString(uint16_t x, uint16_t y, const char* str, FontDef font, uint16_t color, uint16_t bgcolor);
+        |                                                 ~~~~~~~~~~~~^~~
+  Linking ../VisualGDB/Debug/STM32G4_TFT_ST7735...
+  ------------------- Memory utilization report -------------------
+  Used FLASH: 13KB out of 128KB (10%) [+24]
+  Used SRAM: 460 bytes out of 32KB (1%)
